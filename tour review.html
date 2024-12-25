@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Review</title>
+    <!--bootstrap link-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- css link -->
+     <link rel="stylesheet" href="css/style.css">
+     <!-- animation link -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <style>
+        body {
+            background-image: url('images/tour review/pic1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .card {
+            background-color: wheat;
+
+        }
+        .feedback-section {
+            margin-top: 40px;
+        }
+    </style> 
+</head>
+<body>
+    <!--navbar start-->
+    <nav></nav>
+    <!--navbar end-->
+
+    <!-- tour review start-->
+    <div class="container mt-5">
+        <h1 class="text-left mb-5" data-aos="zoom-in">Tour Review</h1>
+
+        <!-- Package Review Section -->
+        <div class="card mb-5" data-aos="fade-up"
+        data-aos-duration="3000">
+            <div class="card-header">
+                <h5 class="mb-0">Package Reviews</h5>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">Amazing Tour to Bali</h6>
+                <p class="card-text">The Bali tour package was fantastic! The itinerary was well-planned, and we got to explore beautiful beaches and cultural sites.</p>
+                <p class="text-muted">Rating: ⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+
+        <!-- Rate Trip Section -->
+        <div class="card" data-aos="fade-up"
+        data-aos-duration="3000">
+            <div class="card-header">
+                <h5 class="mb-0">Rate Your Trip</h5>
+            </div>
+            <div class="card-body">
+                <form id="ratingForm">
+                    <div class="mb-3">
+                        <label for="tripRating" class="form-label">Rate your experience</label>
+                        <select class="form-select" id="tripRating">
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5">5 Stars</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Rating</button>
+                </form>
+                <div id="ratingMessage" class="mt-3"></div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="card feedback-section" data-aos="fade-up"
+        data-aos-duration="3000">
+            <div class="card-header">
+                <h5 class="mb-0">Feedback</h5>
+            </div>
+            <div class="card-body">
+                <form id="feedbackForm">
+                    <div class="mb-3">
+                        <label for="feedbackText" class="form-label">Your Feedback</label>
+                        <textarea class="form-control" id="feedbackText" rows="3" placeholder="Share your experience..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+                <div id="feedbackMessage" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+<!-- tour review end -->
+
+
+    <!--footer start-->
+    <footer></footer>
+    <!--footer end -->
+</body>
+</html>
+<!--bootstrap link-->
+<script src="js/bootstrap.js"></script>
+<!-- Add Bootstrap Icons links -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<script src="main.js"></script>
+<!-- animatin link -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+    // Handle rating submission
+    document.getElementById('ratingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const rating = document.getElementById('tripRating').value;
+        const ratingMessage = document.getElementById('ratingMessage');
+        ratingMessage.textContent = `Thank you for rating your trip ${rating} star(s)!`;
+        ratingMessage.className = 'text-success';
+    });
+
+    // Handle feedback submission
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const feedback = document.getElementById('feedbackText').value;
+        const feedbackMessage = document.getElementById('feedbackMessage');
+        feedbackMessage.textContent = `Thank you for your feedback: "${feedback}"`;
+        feedbackMessage.className = 'text-success';
+        document.getElementById('feedbackText').value = ''; // Clear the feedback textarea
+    });
+</script>

@@ -1,0 +1,78 @@
+/* navbar start */
+.logo{
+    height: 13vh;
+    width: 100%;
+    border: none;
+}
+.navcontent{
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    margin: 20px;
+    text-decoration: none;   
+}
+.navcontent:hover{
+    color: orangered;
+    text-decoration: underline;
+    text-underline-offset: 25px;
+}
+.dropanchor{
+    text-decoration: none;
+}
+.dropanchor:hover {
+    background-color: black; /* Light background on hover */
+    color: orangered; /* Change text color on hover */
+  }
+
+  /* Toggle button start*/
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(0, 0, 0, 1)" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+  }
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  .navbar {
+    background-color: #fff !important;
+  }
+ /* Toggle button end*/
+
+/* navbar end*/
+
+/* banner start */
+/* banner end*/
+
+/* home page styling start */
+/* why choose us cards start */
+.hero {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 4rem;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+/* why choose us cards end */
+/* home page styling end */
+
+/* footer start */
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.social-icons a:hover {
+    color: orangered; /* Gold color on hover */
+}
+/* footer end */
